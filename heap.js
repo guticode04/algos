@@ -1,3 +1,9 @@
+
+function isMaxHeap(array, idx = 1) {
+  let isCompleteHeap = array.every(ele => ele !== undefined);
+  return isCompleteHeap && _isMaxHeap(array);
+}
+
 //helper function
 function _isMaxHeap(arr, idx = 1) {
   if (arr[idx] === undefined) return true;
