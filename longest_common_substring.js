@@ -1,5 +1,19 @@
 function longestCommonSubstring(str1, str2) {
-  
+  let firstSubstring = substrings(str1);
+  let secondSubstring = substrings(str2);
+
+  let commonSubstring = [];
+
+  firstSubstring.forEach((substring) => {
+    if (secondSubstring.includes(substring)) common.push(substring);
+  })
+
+  let longestSubstring = commonSubstring[0];
+
+  commonSubstring.forEach((sub) => {
+    if (longestSubstring.length < sub.length) longestSubstring = sub;
+  })
+  return longestSubstring;
 }
 
 function substrings(str) {
@@ -13,3 +27,9 @@ function substrings(str) {
   }
   return subs;
 }
+
+
+// str1 = "somethingcat";
+// str2 = "thinganothercat";
+
+// console.log(longestCommonSubstring(str1,str2));
