@@ -2,6 +2,6 @@
 // of a number in ascending order.
 
 function factors(num) {
-   const facts = Array.from(Array(num).map( (ele, idx) => idx + 1);
+   const facts = Array.from(Array(num).map( (ele, idx) => idx + 1));
    return facts.filter( ele => num % ele === 0);
 }
