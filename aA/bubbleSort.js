@@ -43,3 +43,12 @@ Array.prototype.bubbleSort = function (callback) {
 
    return resultArr;
 }
+
+
+function swap(array, idx1, idx2) {
+   let temp = array[idx1];
+   array[idx1] = array[idx2];
+   array[idx2] = temp;
+   return array;
+}
+
