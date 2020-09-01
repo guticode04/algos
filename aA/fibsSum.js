@@ -15,3 +15,13 @@ function fib(n) {
    if(n === 2) return 1;
    return fib(n - 1) + fib(n - 2);
 }
+
+
+//without helper method
+
+function fibsSum(n) {
+   if(n === 1) return 1;
+   if(n === 2) return 2;
+
+   return fibsSum(n - 1) + fibsSum(n - 2) + 1;
+}
