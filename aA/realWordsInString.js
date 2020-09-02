@@ -13,3 +13,19 @@ String.prototype.realWordsInString = function (dictionary) {
    return realWords.sort();
 };
 
+//Solution 2
+
+String.prototype.realWordsInString = function (dictionary) {
+   const realWords = [];
+   for (let i = 0; i < this.length; i++) {
+      for (let j = i; j < this.length; j++) {
+         let word = this.slice(i, j + 1);
+
+         if (dictionary.indexOf(word) > -1) {
+            if(realWords.indexOf(word) < 0) realWords.push(word);
+         }
+      }
+   }
+
+   return realWords.sort();
+}
